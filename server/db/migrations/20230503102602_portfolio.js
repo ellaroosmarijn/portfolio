@@ -11,6 +11,7 @@ exports.up = function (knex) {
     table.string('github')
     table.string('date_completed')
     table.string('image')
+    table.boolean('featured')
   })
 }
 
