@@ -1,5 +1,5 @@
 import connection from '../connection'
-import { getAllProjects, getProjectByName } from '../db'
+import { getAllProjects, getProjectByName, getFeaturedProjects } from '../db'
 
 beforeAll(() => {
   return connection.migrate.latest()
@@ -30,5 +30,15 @@ describe('getProjectByName will return projects with the specified name', () => 
     const { name: projectName } = await getProjectByName('TwoMindsOne')
 
     expect(projectName).toBe('TwoMindsOne')
+  })
+})
+
+describe('getFeaturedProjects will return projects by featured true/false', () => {
+  it('returns by featured true/false', async () => {
+    expect.assertions(1)
+
+    const featured = await getFeaturedProjects(true)
+
+    expect(featured).toHaveLength(4)
   })
 })
