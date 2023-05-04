@@ -14,6 +14,7 @@ exports.seed = async function (knex) {
       github: '#',
       date_completed: '3rd of May 2023',
       image: 'image.png',
+      featured: true,
     },
     {
       id: 2,
@@ -23,6 +24,7 @@ exports.seed = async function (knex) {
       github: '#',
       date_completed: '15th of May 2023',
       image: 'image.png',
+      featured: true,
     },
     {
       id: 3,
@@ -32,6 +34,7 @@ exports.seed = async function (knex) {
       github: '#',
       date_completed: '7th of May 2023',
       image: 'image.png',
+      featured: true,
     },
     {
       id: 4,
@@ -41,6 +44,7 @@ exports.seed = async function (knex) {
       github: '#',
       date_completed: 'sometime in April 2023',
       image: 'image.png',
+      featured: true,
     },
   ])
 }
