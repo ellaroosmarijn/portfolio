@@ -11,5 +11,5 @@ export function getProjectByName(name: string) {
 }
 
 export function getFeaturedProjects(featured: boolean) {
-  return db('projects').where({ featured })
+  return db('projects').where({ featured: featured })
 }
