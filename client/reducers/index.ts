@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
 
-// import stuff from './stuff'
+import allProjects from './allProjects'
 
 export default combineReducers({
-  // stuff
+  ProjectState: allProjects,
 })
