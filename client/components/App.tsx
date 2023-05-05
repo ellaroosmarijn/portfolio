@@ -1,10 +1,43 @@
+import {
+  MantineProvider,
+  ColorSchemeProvider,
+  ColorScheme,
+  AppShell,
+} from '@mantine/core'
+import { Notifications } from '@mantine/notifications'
+import { useHotkeys, useLocalStorage } from '@mantine/hooks'
+
+import myTheme from '../theme'
+import Header from './Header'
+
 function App() {
+  const [colorScheme, setColorScheme] = useLocalStorage<ColorScheme>({
+    key: 'mantine-color-scheme',
+    defaultValue: 'light',
+    getInitialValueInEffect: true,
+  })
+
+  const toggleColorScheme = (value?: ColorScheme) =>
+    setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'))
+
+  useHotkeys([['mod+J', () => toggleColorScheme()]])
+
   return (
     <>
-      <header className="header">
-        <h1>My Collection</h1>
-      </header>
-      <section className="main">{/* add your code here */}</section>
+      <ColorSchemeProvider
+        colorScheme={colorScheme}
+        toggleColorScheme={toggleColorScheme}
+      >
+        <MantineProvider
+          theme={{ ...myTheme, colorScheme }}
+          withGlobalStyles
+          withNormalizeCSS
+        >
+          <AppShell fixed header={<Header />}>
+            <Notifications />
+          </AppShell>
+        </MantineProvider>
+      </ColorSchemeProvider>
     </>
   )
 }
