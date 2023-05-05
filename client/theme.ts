@@ -72,7 +72,7 @@ const myTheme: MantineThemeOverride = {
           : theme.colors.yellow[0],
       color:
         theme.colorScheme === 'dark'
-          ? theme.colors.yellow[4]
+          ? theme.colors.yellow[0]
           : theme.colors.yellow[9],
     },
   }),
