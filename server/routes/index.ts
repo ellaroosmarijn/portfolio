@@ -3,7 +3,7 @@ import { getAllProjects } from '../db/db'
 
 const router = express.Router()
 
-router.get('/projects', async (_req, res) => {
+router.get('/', async (_req, res) => {
   try {
     const allProjects = await getAllProjects()
     res.json(allProjects)
