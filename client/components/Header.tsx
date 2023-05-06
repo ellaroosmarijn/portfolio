@@ -43,7 +43,8 @@ export default function HeaderDiv() {
           About
         </Button>
         <Button
-          color="yellow"
+          variant="subtle"
+          color="dark"
           size="sm"
           uppercase
           component={Link}
