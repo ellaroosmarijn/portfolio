@@ -1,3 +1,4 @@
+import { Routes, Route } from 'react-router-dom'
 import {
   MantineProvider,
   ColorSchemeProvider,
@@ -8,6 +9,7 @@ import { Notifications } from '@mantine/notifications'
 import { useHotkeys, useLocalStorage } from '@mantine/hooks'
 
 import myTheme from '../theme'
+import HomePage from './HomePage'
 import Header from './Header'
 
 function App() {
@@ -35,6 +37,9 @@ function App() {
         >
           <AppShell fixed header={<Header />}>
             <Notifications />
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+            </Routes>
           </AppShell>
         </MantineProvider>
       </ColorSchemeProvider>
