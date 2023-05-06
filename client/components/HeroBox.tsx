@@ -11,7 +11,7 @@ export default function HeroBox({ children }: ChildrenProps) {
         margin: theme.spacing.xl,
         backgroundColor:
           theme.colorScheme === 'dark'
-            ? theme.colors.yellow[8]
+            ? theme.colors.yellow[9]
             : theme.colors.yellow[0],
         borderRadius: theme.radius.md,
       })}

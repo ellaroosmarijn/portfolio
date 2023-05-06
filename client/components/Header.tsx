@@ -13,11 +13,11 @@ export default function HeaderDiv() {
         padding: theme.spacing.xl,
         backgroundColor:
           theme.colorScheme === 'dark'
-            ? theme.colors.yellow[8]
+            ? theme.colors.yellow[9]
             : theme.colors.yellow[0],
         borderColor:
           theme.colorScheme === 'dark'
-            ? theme.colors.yellow[8]
+            ? theme.colors.yellow[9]
             : theme.colors.yellow[0],
       })}
     >
