@@ -28,9 +28,9 @@ export default function HeaderDiv() {
           size="sm"
           uppercase
           component={Link}
-          to="/"
+          to="/about"
         >
-          Projects
+          About
         </Button>
         <Button
           variant="subtle"
@@ -38,9 +38,9 @@ export default function HeaderDiv() {
           size="sm"
           uppercase
           component={Link}
-          to="/about"
+          to="/"
         >
-          About
+          Projects
         </Button>
         <Button
           variant="subtle"
