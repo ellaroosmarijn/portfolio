@@ -8,7 +8,7 @@ export default function HeaderDiv() {
     <Header
       fixed
       height={{ base: 50, md: 70 }}
-      p="md"
+      p="lg"
       sx={(theme) => ({
         padding: theme.spacing.xl,
         backgroundColor:
@@ -25,7 +25,7 @@ export default function HeaderDiv() {
         <Button
           variant="subtle"
           color="dark"
-          size="md"
+          size="sm"
           uppercase
           component={Link}
           to="/about"
@@ -34,7 +34,7 @@ export default function HeaderDiv() {
         </Button>
         <Button
           color="yellow"
-          size="md"
+          size="sm"
           uppercase
           component={Link}
           to="/contact"
