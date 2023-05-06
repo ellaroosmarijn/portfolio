@@ -17,11 +17,11 @@ const myTheme: MantineThemeOverride = {
   fontFamily: 'Inter, sans-serif',
 
   fontSizes: {
-    xs: '0.75rem',
-    sm: '0.9rem',
-    md: '1rem',
-    lg: '1.2rem',
-    xl: '1.5rem',
+    xs: '1rem',
+    sm: '2rem',
+    md: '3rem',
+    lg: '5rem',
+    xl: '12rem',
   },
 
   breakpoints: {
