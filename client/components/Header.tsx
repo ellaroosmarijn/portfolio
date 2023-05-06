@@ -1,4 +1,4 @@
-import { Button, Header, Grid } from '@mantine/core'
+import { Button, Header, Group } from '@mantine/core'
 import { Link } from 'react-router-dom'
 
 import LightDarkButton from './LightDarkButton'
@@ -21,7 +21,17 @@ export default function HeaderDiv() {
             : theme.colors.yellow[0],
       })}
     >
-      <Grid justify="flex-end">
+      <Group position="center" spacing="100px">
+        <Button
+          variant="subtle"
+          color="dark"
+          size="sm"
+          uppercase
+          component={Link}
+          to="/"
+        >
+          Projects
+        </Button>
         <Button
           variant="subtle"
           color="dark"
@@ -42,7 +52,7 @@ export default function HeaderDiv() {
           Contact
         </Button>
         <LightDarkButton />
-      </Grid>
+      </Group>
     </Header>
   )
 }
