@@ -1,4 +1,4 @@
-import { Text } from '@mantine/core'
+import { Container, Text, Title } from '@mantine/core'
 
 import HeroBox from './HeroBox'
 
@@ -6,15 +6,21 @@ export default function HomePage() {
   return (
     <>
       <HeroBox>
-        <Text fz="sm" fw={700}>
-          Welcome to
-        </Text>
-        <Text fz="xl" fw={700}>
-          Ella&apos;s Portfolio
-        </Text>
-        <Text fz="sm" fw={700}>
-          One girl&apos;s adventures in software development.
-        </Text>
+        <Container
+          style={{
+            maxWidth: '1150px',
+          }}
+        >
+          <Text fz="sm" fw="700">
+            I AM
+          </Text>
+          <Title order={1}>ELLA ROOSMARIJN</Title>
+          <Text fz="xs" fw="600">
+            A GRADUATE SOFTWARE DEVELOPER LOOKING TO HAVE AN OUTSIZED IMPACT ON
+            THE WORLD. INTERESTED IN POLITICS, PHILOSOPHY, ECONOMICS, AND
+            BUILDING COOL SHIT.
+          </Text>
+        </Container>
       </HeroBox>
     </>
   )
