@@ -14,12 +14,23 @@ const myTheme: MantineThemeOverride = {
   white: '#ffffff',
   black: '#000000',
 
-  fontFamily: 'Inter, sans-serif',
+  fontFamily: 'Work Sans, sans-serif',
+
+  headings: {
+    fontFamily: 'Vina Sans, sans-serif',
+    sizes: {
+      h1: {
+        fontWeight: 500,
+        fontSize: '12rem',
+        lineHeight: 1.4,
+      },
+    },
+  },
 
   fontSizes: {
     xs: '1rem',
-    sm: '2rem',
-    md: '3rem',
+    sm: '1.25rem',
+    md: '2rem',
     lg: '5rem',
     xl: '12rem',
   },
@@ -43,7 +54,7 @@ const myTheme: MantineThemeOverride = {
       '#b36b00',
       '#804c00',
       '#4d2e00',
-      '#1a0f00',
+      '#000000',
     ],
   },
 
