@@ -69,6 +69,15 @@ const myTheme: MantineThemeOverride = {
           marginRight: theme.spacing.md,
           borderWidth: '0px',
           fontWeight: 600,
+          backgroundColor:
+            theme.colorScheme === 'dark'
+              ? theme.colors.yellow[9]
+              : theme.colors.yellow[0],
+          '&:hover': { backgroundColor: 'transparent' },
+          color:
+            theme.colorScheme === 'dark'
+              ? theme.colors.yellow[0]
+              : theme.colors.yellow[9],
         },
       }),
     },
