@@ -62,7 +62,7 @@ const myTheme: MantineThemeOverride = {
 
   components: {
     Button: {
-      defaultProps: { color: 'dark', radius: 'md', loaderPosition: 'center' },
+      defaultProps: { radius: 'md', loaderPosition: 'center' },
       styles: (theme) => ({
         root: {
           textAlign: 'center',
