@@ -15,13 +15,16 @@ export default function LightAndDarkButton() {
         textAlign: 'center',
         backgroundColor:
           theme.colorScheme === 'dark'
-            ? theme.colors.yellow[0]
-            : theme.colors.yellow[1],
+            ? theme.colors.yellow[9]
+            : theme.colors.yellow[0],
         color:
           theme.colorScheme === 'dark'
-            ? theme.colors.yellow[7]
-            : theme.colors.yellow[8],
-        borderColor: theme.colors.yellow[7],
+            ? theme.colors.yellow[0]
+            : theme.colors.yellow[9],
+        borderColor:
+          theme.colorScheme === 'dark'
+            ? theme.colors.yellow[9]
+            : theme.colors.yellow[0],
         borderRadius: theme.radius.md,
         marginRight: theme.spacing.md,
       })}

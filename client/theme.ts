@@ -68,7 +68,7 @@ const myTheme: MantineThemeOverride = {
       ...theme.fn.fontStyles(),
       backgroundColor:
         theme.colorScheme === 'dark'
-          ? theme.colors.yellow[8]
+          ? theme.colors.yellow[9]
           : theme.colors.yellow[0],
       color:
         theme.colorScheme === 'dark'
