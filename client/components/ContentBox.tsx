@@ -6,6 +6,7 @@ export default function ContentBox({ children }: ChildrenProps) {
   return (
     <Box
       sx={(theme) => ({
+        textAlign: 'center',
         padding: theme.spacing.xl,
         margin: theme.spacing.xl,
         backgroundColor:
