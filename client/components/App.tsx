@@ -11,6 +11,8 @@ import { useHotkeys, useLocalStorage } from '@mantine/hooks'
 import myTheme from '../theme'
 import HomePage from './HomePage'
 import Header from './Header'
+import Projects from './Projects'
+import About from './About'
 
 function App() {
   const [colorScheme, setColorScheme] = useLocalStorage<ColorScheme>({
@@ -37,9 +39,9 @@ function App() {
         >
           <AppShell fixed header={<Header />}>
             <Notifications />
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-            </Routes>
+            <HomePage />
+            {/* <About /> */}
+            <Projects />
           </AppShell>
         </MantineProvider>
       </ColorSchemeProvider>
