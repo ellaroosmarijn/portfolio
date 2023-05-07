@@ -21,13 +21,24 @@ const myTheme: MantineThemeOverride = {
     sizes: {
       h1: {
         fontWeight: 500,
+        fontSize: '12.5rem',
+        lineHeight: 1.4,
+      },
+      h2: {
+        fontWeight: 500,
         fontSize: '12rem',
+        lineHeight: 1.4,
+      },
+      h3: {
+        fontWeight: 500,
+        fontSize: '6rem',
         lineHeight: 1.4,
       },
     },
   },
 
   fontSizes: {
+    xxs: '0.75rem',
     xs: '1rem',
     sm: '1.25rem',
     md: '2rem',
