@@ -7,6 +7,7 @@ export default function HomePage() {
     <>
       <ContentBox>
         <Container
+          py={'100px'}
           style={{
             maxWidth: '1150px',
           }}
