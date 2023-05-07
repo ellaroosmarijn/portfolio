@@ -7,9 +7,9 @@ export default function Projects() {
     <>
       <ContentBox>
         <Container
+          py={'100px'}
           style={{
             maxWidth: '800px',
-            maxHeight: '1200px',
           }}
         >
           <Text fz="sm" fw="700">
