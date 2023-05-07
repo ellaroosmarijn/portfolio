@@ -1,11 +1,11 @@
 import { Container, Text, Title } from '@mantine/core'
 
-import HeroBox from './HeroBox'
+import ContentBox from './ContentBox'
 
 export default function HomePage() {
   return (
     <>
-      <HeroBox>
+      <ContentBox>
         <Container
           style={{
             maxWidth: '1150px',
@@ -21,7 +21,7 @@ export default function HomePage() {
             BUILDING COOL SHIT.
           </Text>
         </Container>
-      </HeroBox>
+      </ContentBox>
     </>
   )
 }
