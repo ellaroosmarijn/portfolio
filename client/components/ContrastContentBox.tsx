@@ -12,7 +12,10 @@ export default function ContrastContentBox({ children }: ChildrenProps) {
           theme.colorScheme === 'dark'
             ? theme.colors.yellow[0]
             : theme.colors.yellow[9],
-        borderRadius: theme.radius.md,
+        color:
+          theme.colorScheme === 'dark'
+            ? theme.colors.yellow[9]
+            : theme.colors.yellow[0],
       })}
     >
       {children}
