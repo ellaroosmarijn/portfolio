@@ -1,4 +1,3 @@
-import { Routes, Route } from 'react-router-dom'
 import {
   MantineProvider,
   ColorSchemeProvider,
@@ -12,7 +11,6 @@ import myTheme from '../theme'
 import HomePage from './HomePage'
 import Header from './Header'
 import Projects from './Projects'
-import About from './About'
 
 function App() {
   const [colorScheme, setColorScheme] = useLocalStorage<ColorScheme>({
@@ -40,7 +38,6 @@ function App() {
           <AppShell fixed header={<Header />}>
             <Notifications />
             <HomePage />
-            {/* <About /> */}
             <Projects />
           </AppShell>
         </MantineProvider>
