@@ -20,19 +20,13 @@ const myTheme: MantineThemeOverride = {
     fontFamily: 'Vina Sans, sans-serif',
     sizes: {
       h1: {
-        fontWeight: 500,
         fontSize: '12.5rem',
-        lineHeight: 1.4,
       },
       h2: {
-        fontWeight: 500,
         fontSize: '12rem',
-        lineHeight: 1.4,
       },
       h3: {
-        fontWeight: 500,
         fontSize: '6rem',
-        lineHeight: 1.4,
       },
     },
   },
@@ -54,24 +48,53 @@ const myTheme: MantineThemeOverride = {
     xl: '90em',
   },
 
-  colors: {
-    yellow: [
-      '#fffbf5',
-      '#ffe0b3',
-      '#ffcc80',
-      '#ffb84d',
-      '#ffa31a',
-      '#e68a00',
-      '#b36b00',
-      '#804c00',
-      '#4d2e00',
-      '#000000',
-    ],
-  },
-
-  primaryColor: 'yellow',
-
   components: {
+    Header: {
+      styles: () => ({
+        root: {
+          position: 'fixed',
+          perspective: '1000px',
+          backgroundColor: 'transparent',
+          borderBottom: 'none',
+          '& a:before': {
+            content: 'attr(data-hover)',
+            textTransform: 'uppercase',
+            position: 'absolute',
+            top: '100%',
+            left: 0,
+            width: '100%',
+            height: '100%',
+            transition: 'color 0.3s',
+            transform: 'rotateX(-90deg)',
+            transformOrigin: '50% 0',
+            textAlign: 'center',
+          },
+          '& a': {
+            height: '1.5rem',
+            textTransform: 'uppercase',
+            position: 'relative',
+            display: 'inline-block',
+            padding: 0,
+            transition: 'transform 0.3s',
+            transformOrigin: '50% 0',
+            transformStyle: 'preserve-3d',
+          },
+          '& a:hover': {
+            transform: 'rotateX(90deg) translateY(-22px)',
+          },
+        },
+      }),
+    },
+    Title: {
+      styles: () => ({
+        root: {
+          marginTop: '-0.1em',
+          paddingBottom: '0.1em',
+          fontWeight: 500,
+          lineHeight: 0.75,
+        },
+      }),
+    },
     Button: {
       defaultProps: { radius: 'md', loaderPosition: 'center' },
       styles: (theme) => ({
@@ -80,31 +103,22 @@ const myTheme: MantineThemeOverride = {
           marginRight: theme.spacing.md,
           borderWidth: '0px',
           fontWeight: 600,
-          backgroundColor:
-            theme.colorScheme === 'dark'
-              ? theme.colors.yellow[9]
-              : theme.colors.yellow[0],
+          backgroundColor: theme.black,
           '&:hover': { backgroundColor: 'transparent' },
-          color:
-            theme.colorScheme === 'dark'
-              ? theme.colors.yellow[0]
-              : theme.colors.yellow[9],
+          color: theme.white,
         },
       }),
     },
   },
 
   globalStyles: (theme) => ({
+    html: {
+      filter: 'sepia(100%) saturate(60%)',
+    },
     'html, body': {
       ...theme.fn.fontStyles(),
-      backgroundColor:
-        theme.colorScheme === 'dark'
-          ? theme.colors.yellow[9]
-          : theme.colors.yellow[0],
-      color:
-        theme.colorScheme === 'dark'
-          ? theme.colors.yellow[0]
-          : theme.colors.yellow[9],
+      backgroundColor: theme.black,
+      color: theme.white,
     },
   }),
 }
