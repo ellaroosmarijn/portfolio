@@ -1,24 +1,13 @@
 import { Button, Header, Group } from '@mantine/core'
 import { Link } from 'react-router-dom'
 
-import LightDarkButton from './LightDarkButton'
-
 export default function HeaderDiv() {
   return (
     <Header
-      fixed
       height={{ base: 50, md: 70 }}
-      p="lg"
       sx={(theme) => ({
         padding: theme.spacing.xl,
-        backgroundColor:
-          theme.colorScheme === 'dark'
-            ? theme.colors.yellow[9]
-            : theme.colors.yellow[0],
-        borderColor:
-          theme.colorScheme === 'dark'
-            ? theme.colors.yellow[9]
-            : theme.colors.yellow[0],
+        mixBlendMode: 'difference',
       })}
     >
       <Group position="center" spacing="100px">
@@ -26,9 +15,9 @@ export default function HeaderDiv() {
           variant="subtle"
           color="dark"
           size="sm"
-          uppercase
           component={Link}
           to="/about"
+          data-hover="About"
         >
           About
         </Button>
@@ -36,8 +25,8 @@ export default function HeaderDiv() {
           variant="subtle"
           color="dark"
           size="sm"
-          uppercase
           component={Link}
+          data-hover="Projects"
           to="/"
         >
           Projects
@@ -46,13 +35,12 @@ export default function HeaderDiv() {
           variant="subtle"
           color="dark"
           size="sm"
-          uppercase
           component={Link}
+          data-hover="Contact"
           to="/contact"
         >
           Contact
         </Button>
-        <LightDarkButton />
       </Group>
     </Header>
   )
