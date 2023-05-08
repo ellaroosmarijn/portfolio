@@ -2,7 +2,6 @@ import {
   MantineProvider,
   ColorSchemeProvider,
   ColorScheme,
-  AppShell,
 } from '@mantine/core'
 import { Notifications } from '@mantine/notifications'
 import { useHotkeys, useLocalStorage } from '@mantine/hooks'
@@ -11,6 +10,7 @@ import myTheme from '../theme'
 import HomePage from './HomePage'
 import Header from './Header'
 import Projects from './Projects'
+import About from './About'
 
 function App() {
   const [colorScheme, setColorScheme] = useLocalStorage<ColorScheme>({
@@ -35,11 +35,11 @@ function App() {
           withGlobalStyles
           withNormalizeCSS
         >
-          <AppShell fixed header={<Header />}>
-            <Notifications />
-            <HomePage />
-            <Projects />
-          </AppShell>
+          <Header />
+          <Notifications />
+          <HomePage />
+          <About />
+          <Projects />
         </MantineProvider>
       </ColorSchemeProvider>
     </>
