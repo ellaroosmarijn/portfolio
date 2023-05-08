@@ -7,7 +7,6 @@ export default function Projects() {
     <>
       <ContentBox>
         <Container
-          py={'100px'}
           style={{
             maxWidth: '800px',
           }}
@@ -23,7 +22,7 @@ export default function Projects() {
             AND EFFICIENCY. ONCE THIS OCCURS, POSITIVE RESULTS ARE INEVITABLE.
           </Text>
         </Container>
-        <Grid>
+        <Grid py={'xl'}>
           <Grid.Col span={5}>
             <Container>
               <Image
@@ -37,7 +36,7 @@ export default function Projects() {
           </Grid.Col>
           <Grid.Col span={5}>
             <Container>
-              <Text fz="xxs" fw="700" ta="center">
+              <Text fz="xxs" fw="800" ta="center">
                 SOLO PROJECT
               </Text>
               <Title order={3}>TWO MINDS ONE</Title>
@@ -54,7 +53,7 @@ export default function Projects() {
           </Grid.Col>
           <Grid.Col span={5}>
             <Container>
-              <Text fz="xxs" fw="700" ta="center">
+              <Text fz="xxs" fw="800" ta="center">
                 GROUP PROJECT
               </Text>
               <Title order={3}>GALLERINA</Title>
