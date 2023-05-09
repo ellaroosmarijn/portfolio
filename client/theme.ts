@@ -95,20 +95,6 @@ const myTheme: MantineThemeOverride = {
         },
       }),
     },
-    Button: {
-      defaultProps: { radius: 'md', loaderPosition: 'center' },
-      styles: (theme) => ({
-        root: {
-          textAlign: 'center',
-          marginRight: theme.spacing.md,
-          borderWidth: '0px',
-          fontWeight: 600,
-          backgroundColor: theme.black,
-          '&:hover': { backgroundColor: 'transparent' },
-          color: theme.white,
-        },
-      }),
-    },
   },
 
   globalStyles: (theme) => ({
