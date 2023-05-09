@@ -1,5 +1,5 @@
-import { Button, Header, Group } from '@mantine/core'
-import { Link } from 'react-router-dom'
+import { Header, Group } from '@mantine/core'
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 export default function HeaderDiv() {
   return (
@@ -11,36 +11,15 @@ export default function HeaderDiv() {
       })}
     >
       <Group position="center" spacing="100px">
-        <Button
-          variant="subtle"
-          color="dark"
-          size="sm"
-          component={Link}
-          to="/about"
-          data-hover="About"
-        >
+        <AnchorLink href="#about" data-hover="about" offset={200}>
           About
-        </Button>
-        <Button
-          variant="subtle"
-          color="dark"
-          size="sm"
-          component={Link}
-          data-hover="Projects"
-          to="/"
-        >
+        </AnchorLink>
+        <AnchorLink href="#projects" data-hover="projects" offset={200}>
           Projects
-        </Button>
-        <Button
-          variant="subtle"
-          color="dark"
-          size="sm"
-          component={Link}
-          data-hover="Contact"
-          to="/contact"
-        >
+        </AnchorLink>
+        <AnchorLink href="#contact" data-hover="contact" offset={200}>
           Contact
-        </Button>
+        </AnchorLink>
       </Group>
     </Header>
   )

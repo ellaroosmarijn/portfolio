@@ -7,6 +7,7 @@ export default function Projects() {
     <>
       <ContentBox>
         <Container
+          id="projects"
           style={{
             maxWidth: '800px',
           }}
