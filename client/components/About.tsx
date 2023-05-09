@@ -7,6 +7,7 @@ export default function About() {
     <>
       <ContentBox variant={ContentBoxVariant.Light}>
         <Container
+          id="about"
           style={{
             maxWidth: '800px',
           }}
