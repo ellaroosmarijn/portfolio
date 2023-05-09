@@ -88,6 +88,7 @@
   "dependencies": {
     "@devacademy/eslint-config": "^1.8.0",
     "@emotion/react": "^11.10.8",
+    "@emotion/styled": "^11.11.0",
     "@mantine/carousel": "^6.0.10",
     "@mantine/core": "^6.0.10",
     "@mantine/dates": "^6.0.10",
