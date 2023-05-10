@@ -11,6 +11,7 @@ import HomePage from './HomePage'
 import Header from './Header'
 import Projects from './Projects'
 import About from './About'
+import Contact from './Contact'
 
 function App() {
   const [colorScheme, setColorScheme] = useLocalStorage<ColorScheme>({
@@ -40,6 +41,7 @@ function App() {
           <HomePage />
           <About />
           <Projects />
+          <Contact />
         </MantineProvider>
       </ColorSchemeProvider>
     </>

@@ -102,12 +102,57 @@ const myTheme: MantineThemeOverride = {
         },
       }),
     },
+    Button: {
+      styles: () => ({
+        root: {
+          backgroundColor: 'black',
+          color: 'white',
+        },
+      }),
+    },
+    TextInput: {
+      styles: () => ({
+        root: {
+          textAlign: 'left',
+        },
+        label: {
+          color: 'black',
+          fontWeight: 600,
+        },
+        required: {
+          color: 'black',
+        },
+        input: {
+          borderRadius: 0,
+          backgroundColor: 'black',
+        },
+      }),
+    },
+    Textarea: {
+      styles: () => ({
+        root: {
+          textAlign: 'left',
+          minHeight: '10rem',
+        },
+        label: {
+          color: 'black',
+          fontWeight: 600,
+        },
+        required: {
+          color: 'black',
+        },
+        input: {
+          borderRadius: 0,
+          backgroundColor: 'black',
+        },
+      }),
+    },
   },
 
   globalStyles: (theme) => ({
-    html: {
-      filter: 'sepia(100%) saturate(60%)',
-    },
+    // html: {
+    //   filter: 'sepia(100%) saturate(60%)',
+    // },
     'html, body': {
       ...theme.fn.fontStyles(),
       backgroundColor: theme.black,
