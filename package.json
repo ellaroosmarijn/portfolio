@@ -115,6 +115,7 @@
     "knex": "^2.3.0",
     "pg": "^8.8.0",
     "react-anchor-link-smooth-scroll": "^1.0.12",
+    "react-icons": "^4.8.0",
     "react-scroll": "^1.8.9",
     "sqlite3": "^5.1.2",
     "superagent": "7.1.1",
