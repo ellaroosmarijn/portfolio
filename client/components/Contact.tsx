@@ -82,9 +82,7 @@ export default function Contact() {
             />
 
             <Group position="right" mt="md">
-              <Button type="submit" onClick={(e) => form}>
-                Send
-              </Button>
+              <Button type="submit">Send</Button>
             </Group>
           </form>
         </Container>
