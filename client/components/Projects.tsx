@@ -10,8 +10,8 @@ import {
 import { GoMarkGithub } from 'react-icons/go'
 
 import ContentBox from './ContentBox'
-import TwoMindsOnePicture from '../../server/public/images/twoMindsOne.png'
-import GallerinaPicture from '../../server/public/images/gallerina.png'
+import TwoMindsOnePicture from '../assets/twoMindsOne.png'
+import GallerinaPicture from '../assets/gallerina.png'
 
 export default function Projects() {
   const iconStyle = {

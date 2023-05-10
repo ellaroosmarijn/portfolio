@@ -9,7 +9,6 @@ const StyledAnchorLink = styled(AnchorLink)`
   margin-right: 6px;
   border-width: 0px;
   font-weight: 600;
-  background-color: #000000;
   color: #ffffff;
   transition: background-color 0.2s;
   text-decoration: none;
@@ -21,23 +20,8 @@ const StyledAnchorLink = styled(AnchorLink)`
 `
 
 export default function HeaderDiv(): JSX.Element {
-  const iconStyle = {
-    color: 'white',
-    backgroundColor: 'black',
-    maxHeight: '20px',
-  }
-
   return (
-    <Header
-      height={{ base: 50, md: 70 }}
-      sx={(theme) => ({
-        padding: theme.spacing.xl,
-        mixBlendMode: 'difference',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-      })}
-    >
+    <Header height={{ base: 50, md: 70 }}>
       <Group position="center" spacing="100px">
         <StyledAnchorLink href="#about" data-hover="about" offset={200}>
           About
@@ -57,12 +41,12 @@ export default function HeaderDiv(): JSX.Element {
       >
         <a href="https://www.linkedin.com/in/ellarrobinson/">
           <ThemeIcon variant="light">
-            <FaLinkedin style={iconStyle} />
+            <FaLinkedin />
           </ThemeIcon>
         </a>
         <a href="EllaRobinson_CV.pdf">
           <ThemeIcon variant="light">
-            <GoFilePdf style={iconStyle} />
+            <GoFilePdf />
           </ThemeIcon>
         </a>
       </Group>

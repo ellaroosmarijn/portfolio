@@ -50,11 +50,16 @@ const myTheme: MantineThemeOverride = {
 
   components: {
     Header: {
-      styles: () => ({
+      styles: (theme) => ({
         root: {
           position: 'fixed',
           perspective: '1000px',
           backgroundColor: 'transparent',
+          mixBlendMode: 'difference',
+          padding: theme.spacing.xl,
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
           borderBottom: 'none',
           '& a[data-hover]:before': {
             content: 'attr(data-hover)',
@@ -110,7 +115,7 @@ const myTheme: MantineThemeOverride = {
     Button: {
       styles: () => ({
         root: {
-          backgroundColor: 'black',
+          backgroundColor: 'transparent',
           color: 'white',
           borderRadius: '0',
         },
@@ -150,6 +155,17 @@ const myTheme: MantineThemeOverride = {
         input: {
           borderRadius: 0,
           backgroundColor: 'black',
+        },
+      }),
+    },
+    ThemeIcon: {
+      styles: () => ({
+        root: {
+          color: 'white',
+          background: 'transparent',
+          '& svg': {
+            height: '100%',
+          },
         },
       }),
     },
