@@ -1,10 +1,23 @@
-import { Container, Grid, Text, Image, Title } from '@mantine/core'
-import ContentBox from './ContentBox'
+import {
+  Container,
+  Grid,
+  Text,
+  Image,
+  Title,
+  Divider,
+  ThemeIcon,
+} from '@mantine/core'
+import { GoMarkGithub } from 'react-icons/go'
 
+import ContentBox from './ContentBox'
 import TwoMindsOnePicture from '../../server/public/twoMindsOne.png'
 import GallerinaPicture from '../../server/public/gallerina.png'
 
 export default function Projects() {
+  const iconStyle = {
+    color: 'white',
+  }
+
   return (
     <>
       <ContentBox>
@@ -28,7 +41,7 @@ export default function Projects() {
         <Grid py="2em">
           <Grid.Col my="lg" span={5}>
             <Image
-              maw={500}
+              maw={540}
               mx="auto"
               radius="md"
               src={TwoMindsOnePicture}
@@ -49,6 +62,19 @@ export default function Projects() {
               MEANINGFUL DIALOGUE AND FIND COMMON GROUND DESPITE THEIR POLITICAL
               DIFFERENCES.
             </Text>
+            <Divider my="sm" />
+            <Text fz="xxs" fw="800" ta="center">
+              BUILT USING
+            </Text>
+            <Text fz="xxs" fw="600" ta="center">
+              REACT, REDUX, THUNKS, TYPESCRIPT, SQLITE 3, CHATGPT API,
+              EXPRESS-SESSIONS, MANTINE COMPONENT LIBRARY.
+            </Text>
+            <a href="https://github.com/ellaroosmarijn/two-minds-one">
+              <ThemeIcon variant="light">
+                <GoMarkGithub style={iconStyle} />
+              </ThemeIcon>
+            </a>
           </Grid.Col>
           <Grid.Col my="lg" span={5}>
             <Text fz="xxs" fw="800" ta="center">
@@ -61,10 +87,23 @@ export default function Projects() {
               THEIR COLLECTIONS. LOGGED-IN USERS CAN ADD AND MANAGE THEIR
               COLLECTED PAINTINGS WITH EASE.
             </Text>
+            <Divider my="sm" />
+            <Text fz="xxs" fw="800" ta="center">
+              BUILT USING
+            </Text>
+            <Text fz="xxs" fw="600" ta="center">
+              REACT, REDUX, THUNKS, TYPESCRIPT, SQLITE 3, RESTFULAPI, TAILWIND
+              CSS.
+            </Text>
+            <a href="https://github.com/tohora-2023/Gallerina">
+              <ThemeIcon variant="light">
+                <GoMarkGithub style={iconStyle} />
+              </ThemeIcon>
+            </a>
           </Grid.Col>
           <Grid.Col my="lg" span={5}>
             <Image
-              maw={500}
+              maw={540}
               mx="auto"
               radius="md"
               src={GallerinaPicture}
