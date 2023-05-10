@@ -56,7 +56,7 @@ const myTheme: MantineThemeOverride = {
           perspective: '1000px',
           backgroundColor: 'transparent',
           borderBottom: 'none',
-          '& a:before': {
+          '& a[data-hover]:before': {
             content: 'attr(data-hover)',
             textTransform: 'uppercase',
             position: 'absolute',
@@ -69,8 +69,7 @@ const myTheme: MantineThemeOverride = {
             transformOrigin: '50% 0',
             textAlign: 'center',
           },
-          '& a': {
-            height: '1.5rem',
+          '& a[data-hover]': {
             textTransform: 'uppercase',
             position: 'relative',
             display: 'inline-block',
@@ -79,8 +78,14 @@ const myTheme: MantineThemeOverride = {
             transformOrigin: '50% 0',
             transformStyle: 'preserve-3d',
           },
-          '& a:hover': {
+          '& a[data-hover]:hover': {
             transform: 'rotateX(90deg) translateY(-22px)',
+          },
+          '& a:not([data-hover])': {
+            transition: 'opacity 0.3s',
+          },
+          '& a:not([data-hover]):hover': {
+            opacity: '0.5',
           },
         },
       }),
@@ -151,9 +156,6 @@ const myTheme: MantineThemeOverride = {
   },
 
   globalStyles: (theme) => ({
-    // html: {
-    //   filter: 'sepia(100%) saturate(60%)',
-    // },
     'html, body': {
       ...theme.fn.fontStyles(),
       backgroundColor: theme.black,
