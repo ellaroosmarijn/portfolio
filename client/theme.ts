@@ -95,6 +95,13 @@ const myTheme: MantineThemeOverride = {
         },
       }),
     },
+    Grid: {
+      styles: () => ({
+        root: {
+          justifyContent: 'center',
+        },
+      }),
+    },
   },
 
   globalStyles: (theme) => ({
