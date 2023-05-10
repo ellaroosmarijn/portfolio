@@ -107,6 +107,7 @@ const myTheme: MantineThemeOverride = {
         root: {
           backgroundColor: 'black',
           color: 'white',
+          borderRadius: '0',
         },
       }),
     },
