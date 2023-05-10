@@ -1,6 +1,8 @@
 import { Container, Grid, Text, Image, Title } from '@mantine/core'
-
 import ContentBox from './ContentBox'
+
+import TwoMindsOnePicture from '../../server/public/twoMindsOne.png'
+import GallerinaPicture from '../../server/public/gallerina.png'
 
 export default function Projects() {
   return (
@@ -23,59 +25,51 @@ export default function Projects() {
             AND EFFICIENCY. ONCE THIS OCCURS, POSITIVE RESULTS ARE INEVITABLE.
           </Text>
         </Container>
-        <Grid py={'xl'}>
-          <Grid.Col span={5}>
-            <Container>
-              <Image
-                maw={240}
-                mx="auto"
-                radius="md"
-                src="../../server/public/twoMindsOne.png"
-                alt="two minds one"
-              />
-            </Container>
+        <Grid py="2em">
+          <Grid.Col my="lg" span={5}>
+            <Image
+              maw={500}
+              mx="auto"
+              radius="md"
+              src={TwoMindsOnePicture}
+              alt="two minds one"
+            />
           </Grid.Col>
-          <Grid.Col span={5}>
-            <Container>
-              <Text fz="xxs" fw="800" ta="center">
-                SOLO PROJECT
-              </Text>
-              <Title order={3}>TWO MINDS ONE</Title>
-              <Text fz="xxs" fw="600" ta="center">
-                TWO MINDS ONE IS A PLATFORM FOR RECONNECTING PEOPLE DIVIDED BY
-                POLITICS. IT PROVIDES A SAFE SPACE FOR INDIVIDUALS TO PRACTICE
-                UNDERSTANDING THE OPPOSITION, FOSTERING EMPATHY AND DEEPER
-                COMPREHENSION. BY BRIDGING THE GAP BETWEEN MINDS, TWO MINDS ONE
-                SEEKS TO CREATE AN ENVIRONMENT WHERE PEOPLE CAN ENGAGE IN
-                MEANINGFUL DIALOGUE AND FIND COMMON GROUND DESPITE THEIR
-                POLITICAL DIFFERENCES.
-              </Text>
-            </Container>
+          <Grid.Col my="lg" span={5}>
+            <Text fz="xxs" fw="800" ta="center">
+              SOLO PROJECT
+            </Text>
+            <Title order={3}>TWO MINDS ONE</Title>
+            <Text fz="xxs" fw="600" ta="center">
+              TWO MINDS ONE IS A PLATFORM FOR RECONNECTING PEOPLE DIVIDED BY
+              POLITICS. IT PROVIDES A SAFE SPACE FOR INDIVIDUALS TO PRACTICE
+              UNDERSTANDING THE OPPOSITION, FOSTERING EMPATHY AND DEEPER
+              COMPREHENSION. BY BRIDGING THE GAP BETWEEN MINDS, TWO MINDS ONE
+              SEEKS TO CREATE AN ENVIRONMENT WHERE PEOPLE CAN ENGAGE IN
+              MEANINGFUL DIALOGUE AND FIND COMMON GROUND DESPITE THEIR POLITICAL
+              DIFFERENCES.
+            </Text>
           </Grid.Col>
-          <Grid.Col span={5}>
-            <Container>
-              <Text fz="xxs" fw="800" ta="center">
-                GROUP PROJECT
-              </Text>
-              <Title order={3}>GALLERINA</Title>
-              <Text fz="xxs" fw="600" ta="center">
-                GALLERINA IS A USER-FRIENDLY ART CURATION WEBSITE SIMILAR TO
-                PINTEREST, ALLOWING USERS TO SCROLL THROUGH AND SAVE ARTWORKS TO
-                THEIR COLLECTIONS. LOGGED-IN USERS CAN ADD AND MANAGE THEIR
-                COLLECTED PAINTINGS WITH EASE.
-              </Text>
-            </Container>
+          <Grid.Col my="lg" span={5}>
+            <Text fz="xxs" fw="800" ta="center">
+              GROUP PROJECT
+            </Text>
+            <Title order={3}>GALLERINA</Title>
+            <Text fz="xxs" fw="600" ta="center">
+              GALLERINA IS A USER-FRIENDLY ART CURATION WEBSITE SIMILAR TO
+              PINTEREST, ALLOWING USERS TO SCROLL THROUGH AND SAVE ARTWORKS TO
+              THEIR COLLECTIONS. LOGGED-IN USERS CAN ADD AND MANAGE THEIR
+              COLLECTED PAINTINGS WITH EASE.
+            </Text>
           </Grid.Col>
-          <Grid.Col span={5}>
-            <Container>
-              <Image
-                maw={240}
-                mx="auto"
-                radius="md"
-                src="../../server/public/gallerina.png"
-                alt="gallerina"
-              />
-            </Container>
+          <Grid.Col my="lg" span={5}>
+            <Image
+              maw={500}
+              mx="auto"
+              radius="md"
+              src={GallerinaPicture}
+              alt="gallerina"
+            />
           </Grid.Col>
         </Grid>
       </ContentBox>
