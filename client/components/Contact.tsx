@@ -82,7 +82,7 @@ export default function Contact() {
             />
 
             <Group position="right" mt="md">
-              <Button type="submit">Send</Button>
+              <Button type="submit">SEND</Button>
             </Group>
           </form>
         </Container>
