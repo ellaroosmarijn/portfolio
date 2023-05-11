@@ -169,6 +169,13 @@ const myTheme: MantineThemeOverride = {
         },
       }),
     },
+    Container: {
+      styles: () => ({
+        root: {
+          maxWidth: '800px',
+        },
+      }),
+    },
   },
 
   globalStyles: (theme) => ({

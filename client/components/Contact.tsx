@@ -30,7 +30,7 @@ export default function Contact() {
   return (
     <>
       <ContentBox variant={ContentBoxVariant.Light}>
-        <Container maw="800px" mx="auto" id="contact">
+        <Container mx="auto" id="contact">
           <Text fz="sm" fw="700">
             LET&apos;S CHAT
           </Text>

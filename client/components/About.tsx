@@ -6,12 +6,7 @@ export default function About() {
   return (
     <>
       <ContentBox variant={ContentBoxVariant.Light}>
-        <Container
-          id="about"
-          style={{
-            maxWidth: '800px',
-          }}
-        >
+        <Container id="about">
           <Text fz="sm" fw="700">
             ELLA ROOSMARIJN
           </Text>
