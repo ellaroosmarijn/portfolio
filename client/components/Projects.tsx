@@ -83,9 +83,9 @@ export default function Projects() {
             <Title order={3}>GALLERINA</Title>
             <Text fz="xxs" fw="600" ta="center">
               GALLERINA IS A USER-FRIENDLY ART CURATION WEBSITE SIMILAR TO
-              PINTEREST, ALLOWING USERS TO SCROLL THROUGH AND SAVE ARTWORKS TO
-              THEIR COLLECTIONS. LOGGED-IN USERS CAN ADD AND MANAGE THEIR
-              COLLECTED PAINTINGS WITH EASE.
+              PINTEREST, ALLOWING USERS TO EXPLORE DIFFERENT ARTWORKS AND SAVE
+              THEM TO THEIR COLLECTIONS. LOGGED-IN USERS CAN ADD AND MANAGE
+              THEIR COLLECTED PAINTINGS WITH EASE.
             </Text>
             <Divider my="sm" />
             <Text fz="xxs" fw="800" ta="center">
