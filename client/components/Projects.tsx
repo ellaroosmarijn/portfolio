@@ -21,12 +21,7 @@ export default function Projects() {
   return (
     <>
       <ContentBox>
-        <Container
-          id="projects"
-          style={{
-            maxWidth: '800px',
-          }}
-        >
+        <Container id="projects">
           <Text fz="sm" fw="700">
             ELLA ROOSMARIJN
           </Text>
