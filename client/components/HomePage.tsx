@@ -18,7 +18,7 @@ export default function HomePage() {
           <Text fz="xs" fw="600">
             A GRADUATE SOFTWARE DEVELOPER LOOKING TO HAVE AN OUTSIZED IMPACT ON
             THE WORLD. INTERESTED IN POLITICS, PHILOSOPHY, ECONOMICS, AND
-            BUILDING COOL SHIT.
+            BUILDING CREATIVE THINGS.
           </Text>
         </Container>
       </ContentBox>
