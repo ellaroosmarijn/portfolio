@@ -20,11 +20,15 @@ export default function ContentBox({
       py={'300px'}
       sx={(theme) => ({
         textAlign: 'center',
-        padding: theme.spacing.xl,
+        padding: `${theme.spacing.xl}`,
         margin: theme.spacing.xl,
         backgroundColor:
           variant === ContentBoxVariant.Dark ? theme.black : theme.white,
         color: variant === ContentBoxVariant.Dark ? theme.white : theme.black,
+        [`@media (max-width: ${theme.breakpoints.xs})`]: {
+          paddingLeft: '0',
+          paddingRight: '0',
+        },
       })}
     >
       {children}

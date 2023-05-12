@@ -1,4 +1,4 @@
-import { Header, Group, ThemeIcon } from '@mantine/core'
+import { Header, Group, ThemeIcon, MediaQuery, Container } from '@mantine/core'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import styled from '@emotion/styled'
 import { GoFilePdf } from 'react-icons/go'
@@ -22,7 +22,37 @@ const StyledAnchorLink = styled(AnchorLink)`
 export default function HeaderDiv(): JSX.Element {
   return (
     <Header height={{ base: 50, md: 70 }}>
-      <Group position="center" spacing="100px">
+      <MediaQuery smallerThan="sm" styles={{ display: 'none' }}>
+        <Container
+          style={{
+            margin: '0',
+            maxWidth: 'none',
+            width: '100%',
+            position: 'relative',
+          }}
+        >
+          <DesktopNav />
+        </Container>
+      </MediaQuery>
+      <MediaQuery largerThan="sm" styles={{ display: 'none' }}>
+        <Container>MOBILE</Container>
+      </MediaQuery>
+    </Header>
+  )
+}
+
+function DesktopNav() {
+  return (
+    <>
+      <Group
+        position="center"
+        sx={(theme) => ({
+          gap: '100px',
+          [`@media (max-width: ${theme.breakpoints.md})`]: {
+            gap: '70px',
+          },
+        })}
+      >
         <StyledAnchorLink href="#about" data-hover="about" offset={200}>
           About
         </StyledAnchorLink>
@@ -34,7 +64,7 @@ export default function HeaderDiv(): JSX.Element {
         </StyledAnchorLink>
       </Group>
       <Group
-        sx={() => ({ position: 'absolute', right: '1em' })}
+        sx={() => ({ position: 'absolute', right: '0', top: '-0.25em' })}
         position="center"
         spacing="10px"
         align="center"
@@ -50,6 +80,6 @@ export default function HeaderDiv(): JSX.Element {
           </ThemeIcon>
         </a>
       </Group>
-    </Header>
+    </>
   )
 }
