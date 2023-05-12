@@ -115,9 +115,10 @@ const myTheme: MantineThemeOverride = {
     Button: {
       styles: () => ({
         root: {
-          backgroundColor: 'transparent',
+          backgroundColor: 'black',
           color: 'white',
           borderRadius: '0',
+          '&:hover': { backgroundColor: 'black', opacity: '0.5' },
         },
       }),
     },
