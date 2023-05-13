@@ -8,10 +8,10 @@ import { useHotkeys, useLocalStorage } from '@mantine/hooks'
 
 import myTheme from '../theme'
 import HomePage from './HomePage'
-import Header from './Header'
 import Projects from './Projects'
 import About from './About'
 import Contact from './Contact'
+import Header from './Header'
 
 function App() {
   const [colorScheme, setColorScheme] = useLocalStorage<ColorScheme>({
