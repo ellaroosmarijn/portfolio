@@ -1,10 +1,9 @@
 import styled from '@emotion/styled'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
+import { useCallback, useState } from 'react'
 
 import { BREAKPOINTS } from '../../shared/constants'
-
 import Icon, { IconVariant } from './Icon'
-import { useCallback, useState } from 'react'
 
 const hoverFadeStyle = `
 & a {
