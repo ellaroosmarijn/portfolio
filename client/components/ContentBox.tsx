@@ -1,18 +1,23 @@
 import styled from '@emotion/styled'
+import { ChildrenProps } from '../../shared/types'
 
 export enum ContentBoxVariant {
   Dark,
   Light,
 }
-interface ContentBoxProps {
+interface ContentBoxProps extends ChildrenProps {
   variant: ContentBoxVariant
 }
 
-const ContentBox = styled.div<ContentBoxProps>`
+const ContentBoxWrapper = styled.div<ContentBoxProps>`
+  text-align: center;
+  min-height: 100vh;
+  padding: 5rem 0;
+
   display: flex;
   align-items: center;
-  text-align: center;
-  height: 55rem;
+  flex-direction: column;
+  justify-content: center;
 
   background: ${({ variant }) =>
     variant === ContentBoxVariant.Dark ? '#000000' : '#ffffff'};
@@ -20,4 +25,20 @@ const ContentBox = styled.div<ContentBoxProps>`
     variant === ContentBoxVariant.Dark ? '#ffffff' : '#000000'};
 `
 
-export default ContentBox
+const ContentBoxBody = styled.div`
+  display: table-caption;
+`
+const ContentBoxFlexTarget = styled.div`
+  display: block;
+`
+
+export default function ContentBox(props: ContentBoxProps) {
+  const { children } = props
+  return (
+    <ContentBoxWrapper {...props}>
+      <ContentBoxFlexTarget>
+        <ContentBoxBody>{children}</ContentBoxBody>
+      </ContentBoxFlexTarget>
+    </ContentBoxWrapper>
+  )
+}
