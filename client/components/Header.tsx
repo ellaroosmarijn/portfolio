@@ -108,9 +108,10 @@ export const GroupLinks = styled.div`
 export const GroupIcons = styled.div`
   position: absolute;
   display: flex;
+  align-items: center;
   gap: 1rem;
   right: 1.5rem;
-  height: 0.75em;
+  height: 1.5em;
 
   & a {
     display: block;
