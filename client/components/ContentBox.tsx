@@ -1,37 +1,23 @@
-import { Box } from '@mantine/core'
-
-import { ChildrenProps } from '../../shared/types'
+import styled from '@emotion/styled'
 
 export enum ContentBoxVariant {
   Dark,
   Light,
 }
-interface ContentBoxProps extends ChildrenProps {
-  variant?: ContentBoxVariant
+interface ContentBoxProps {
+  variant: ContentBoxVariant
 }
 
-export default function ContentBox({
-  children,
-  variant = ContentBoxVariant.Dark,
-}: ContentBoxProps) {
-  return (
-    <Box
-      m={0}
-      py={'300px'}
-      sx={(theme) => ({
-        textAlign: 'center',
-        padding: `${theme.spacing.xl}`,
-        margin: theme.spacing.xl,
-        backgroundColor:
-          variant === ContentBoxVariant.Dark ? theme.black : theme.white,
-        color: variant === ContentBoxVariant.Dark ? theme.white : theme.black,
-        [`@media (max-width: ${theme.breakpoints.xs})`]: {
-          paddingLeft: '0',
-          paddingRight: '0',
-        },
-      })}
-    >
-      {children}
-    </Box>
-  )
-}
+const ContentBox = styled.div<ContentBoxProps>`
+  display: flex;
+  align-items: center;
+  text-align: center;
+  height: 55rem;
+
+  background: ${({ variant }) =>
+    variant === ContentBoxVariant.Dark ? '#000000' : '#ffffff'};
+  color: ${({ variant }) =>
+    variant === ContentBoxVariant.Dark ? '#ffffff' : '#000000'};
+`
+
+export default ContentBox

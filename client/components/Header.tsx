@@ -124,7 +124,6 @@ export const GroupIcons = styled.div`
   @media (max-width: ${BREAKPOINTS.md}) {
     position: relative;
     right: 0;
-    height: 1.5em;
     gap: 15rem;
     margin: -1.25em;
   }
