@@ -19,6 +19,7 @@ export const Header = styled.div<NavOpenProps>`
   position: fixed;
   width: 100%;
   mix-blend-mode: difference;
+  z-index: 1;
   @media (max-width: ${BREAKPOINTS.md}) {
     margin-top: 0;
     display: flex;
@@ -220,7 +221,6 @@ export default function HeaderDiv(): JSX.Element {
             onClick={onHamburglerClick}
             href="#about"
             data-hover="about"
-            offset={200}
           >
             About
           </StyledAnchorLink>
@@ -228,7 +228,6 @@ export default function HeaderDiv(): JSX.Element {
             onClick={onHamburglerClick}
             href="#projects"
             data-hover="projects"
-            offset={200}
           >
             Projects
           </StyledAnchorLink>
@@ -236,7 +235,6 @@ export default function HeaderDiv(): JSX.Element {
             onClick={onHamburglerClick}
             href="#contact"
             data-hover="contact"
-            offset={200}
           >
             Contact
           </StyledAnchorLink>
