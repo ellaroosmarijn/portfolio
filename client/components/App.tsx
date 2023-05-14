@@ -7,7 +7,7 @@ import { Notifications } from '@mantine/notifications'
 import { useHotkeys, useLocalStorage } from '@mantine/hooks'
 
 import myTheme from '../theme'
-import HomePage from './HomePage'
+import Hero from './Hero'
 import Projects from './Projects'
 import About from './About'
 import Contact from './Contact'
@@ -38,7 +38,7 @@ function App() {
         >
           <Header />
           <Notifications />
-          <HomePage />
+          <Hero />
           <About />
           <Projects />
           <Contact />
