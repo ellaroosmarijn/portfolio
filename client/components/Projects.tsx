@@ -58,7 +58,7 @@ const Divider = styled.div`
 `
 
 const Image = styled.img`
-  filter: invert(100%);
+  filter: invert(100%) contrast(1.5);
   object-fit: contain;
   height: 100%;
   display: inline-block;
