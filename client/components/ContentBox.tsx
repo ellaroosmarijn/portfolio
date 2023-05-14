@@ -7,6 +7,7 @@ export enum ContentBoxVariant {
 }
 interface ContentBoxProps extends ChildrenProps {
   variant: ContentBoxVariant
+  id?: string
 }
 
 const ContentBoxWrapper = styled.div<ContentBoxProps>`
