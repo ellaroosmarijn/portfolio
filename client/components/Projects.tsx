@@ -5,9 +5,7 @@ import BrainPicture from '../assets/brain.jpg'
 import BallerinaPicture from '../assets/ballerina.jpg'
 import ExternalLinkPicture from '../assets/external-link.png'
 import HideMobile from './HideMobile'
-import Icon, { IconVariant } from './Icon'
 import ProjectHeading from './ProjectHeading'
-import { BREAKPOINTS } from '../../shared/constants'
 
 const Container = styled.div`
   padding: 0 10rem;
