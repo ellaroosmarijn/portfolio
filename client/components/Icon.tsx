@@ -1,10 +1,12 @@
 import styled from '@emotion/styled'
 import { GoFilePdf } from 'react-icons/go'
 import { FaLinkedin } from 'react-icons/fa'
+import { GoMarkGithub } from 'react-icons/go'
 
 export enum IconVariant {
   PDF,
   LinkedIn,
+  GitHubIcon,
 }
 
 interface IconProps {
@@ -16,17 +18,19 @@ export default function Icon({ variant }: IconProps) {
       return <PdfIcon />
     case IconVariant.LinkedIn:
       return <LinkedInIcon />
+    case IconVariant.GitHubIcon:
+      return <GitHubIcon />
     default:
       return <span>NO ICON</span>
   }
 }
 
 const iconStyles = `
-  color: white;
-  background: transparent;
+  display: block;
   height: 100%;
   width: 100%;
-  display: block;
+  background: transparent;
+  color: white;
 `
 
 export const LinkedInIcon = styled(FaLinkedin)`
@@ -35,4 +39,13 @@ export const LinkedInIcon = styled(FaLinkedin)`
 
 export const PdfIcon = styled(GoFilePdf)`
   ${iconStyles}
+`
+
+export const GitHubIcon = styled(GoMarkGithub)`
+  height: 2rem;
+  background: transparent;
+  color: white;
+  position: absolute;
+  display: flex;
+  align-items: center;
 `
