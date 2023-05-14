@@ -1,28 +1,27 @@
-import { Container, Text, Title } from '@mantine/core'
-
 import ContentBox, { ContentBoxVariant } from './ContentBox'
+import BaseTitle from './BaseTitle'
+import AboveTitleText from './AboveTitleText'
+import BelowTitleText from './BelowTitleText'
+import HideMobile from './HideMobile'
 
 export default function About() {
   return (
     <>
-      <ContentBox variant={ContentBoxVariant.Light}>
-        <Container id="about">
-          <Text fz="sm" fw="700">
-            ELLA ROOSMARIJN
-          </Text>
-          <Title order={2}>ABOUT ME</Title>
-          <Text fz="xs" fw="600">
-            KIA ORA! I&apos;M A KIWI SOFTWARE DEVELOPER PASSIONATE ABOUT MAKING
-            A POSITIVE IMPACT THROUGH TECHNOLOGY. MY FOCUS IS ON IMPROVING
-            ACCESSIBILITY AND EFFICIENCY. I BELIEVE THAT CARING FOR OTHERS AND
-            PUTTING PASSION INTO OUR WORK LEADS TO POSITIVE RESULTS. IN MY SPARE
-            TIME, I&apos;M WORKING ON A PROJECT THAT AIMS TO BRIDGE THE GAP
-            BETWEEN MINDS AS A PLATFORM FOR PRACTISING EMPATHY AND CONFLICT
-            MINIMISATION. I&apos;M ALSO COLLABORATING WITH MY DEV ACADEMY PEERS
-            ON A CODING PROJECT. OUTSIDE OF TECH, I ENJOY SCUBA DIVING, READING,
-            AND PONDERING THE WORLD.
-          </Text>
-        </Container>
+      <ContentBox variant={ContentBoxVariant.Light} id="about">
+        <AboveTitleText>SOMETHING</AboveTitleText>
+        <BaseTitle>ABOUT ME</BaseTitle>
+        <BelowTitleText>
+          I&apos;M A PASSIONATE SOFTWARE DEVELOPER FOCUSED ON MAKING A POSITIVE
+          IMPACT THROUGH IMPROVING ACCESSIBILITY AND EFFICIENCY. I BELIEVE THAT
+          CARING FOR OTHERS AND PUTTING PASSION INTO YOUR WORK LEADS TO POSITIVE
+          RESULTS.
+          <HideMobile>
+            {' '}
+            IN MY SPARE TIME, I&apos;M WORKING ON A PROJECT TO BRIDGE THE GAP
+            BETWEEN MINDS, FOSTERING EMPATHY AND CONFLICT MINIMIZATION. BEYOND
+            TECH, I ENJOY SCUBA DIVING, READING, AND CONTEMPLATING THE WORLD.
+          </HideMobile>
+        </BelowTitleText>
       </ContentBox>
     </>
   )
