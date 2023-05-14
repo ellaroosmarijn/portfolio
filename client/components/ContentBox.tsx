@@ -7,13 +7,12 @@ export enum ContentBoxVariant {
 }
 interface ContentBoxProps extends ChildrenProps {
   variant: ContentBoxVariant
-  id?: string
 }
 
-const ContentBoxWrapper = styled.div<ContentBoxProps>`
+const ContentBox = styled.div<ContentBoxProps>`
   text-align: center;
   min-height: 100vh;
-  padding: 5rem 0;
+  padding: 15rem 0;
 
   display: flex;
   align-items: center;
@@ -26,20 +25,4 @@ const ContentBoxWrapper = styled.div<ContentBoxProps>`
     variant === ContentBoxVariant.Dark ? '#ffffff' : '#000000'};
 `
 
-const ContentBoxBody = styled.div`
-  display: table-caption;
-`
-const ContentBoxFlexTarget = styled.div`
-  display: block;
-`
-
-export default function ContentBox(props: ContentBoxProps) {
-  const { children } = props
-  return (
-    <ContentBoxWrapper {...props}>
-      <ContentBoxFlexTarget>
-        <ContentBoxBody>{children}</ContentBoxBody>
-      </ContentBoxFlexTarget>
-    </ContentBoxWrapper>
-  )
-}
+export default ContentBox
