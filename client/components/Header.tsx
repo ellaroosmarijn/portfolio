@@ -240,6 +240,9 @@ export default function HeaderDiv(): JSX.Element {
           </StyledAnchorLink>
         </GroupLinks>
         <GroupIcons>
+          <a href="https://github.com/ellaroosmarijn/portfolio">
+            <Icon variant={IconVariant.GitHubIcon} />
+          </a>
           <a href="https://www.linkedin.com/in/ellarrobinson/">
             <Icon variant={IconVariant.LinkedIn} />
           </a>
