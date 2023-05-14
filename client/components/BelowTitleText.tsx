@@ -1,4 +1,5 @@
 import styled from '@emotion/styled'
+import { BREAKPOINTS } from '../../shared/constants'
 
 const BelowTitleText = styled.div`
   font-size: 1rem;
@@ -6,6 +7,10 @@ const BelowTitleText = styled.div`
   whitespace: 'pre-line';
   line-height: 0.9;
   letter-spacing: -0.05em;
+
+  @media (max-width: ${BREAKPOINTS.sm}) {
+    font-size: 0.75rem;
+  }
 `
 
 export default BelowTitleText
