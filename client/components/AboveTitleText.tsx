@@ -4,6 +4,7 @@ import { BREAKPOINTS } from '../../shared/constants'
 const AboveTitleText = styled.div`
   font-size: 1.25rem;
   font-weight: 700;
+  text-transform: uppercase;
 
   @media (max-width: ${BREAKPOINTS.sm}) {
     font-size: 1rem;

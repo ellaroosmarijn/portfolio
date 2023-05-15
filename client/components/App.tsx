@@ -1,49 +1,43 @@
-import {
-  MantineProvider,
-  ColorSchemeProvider,
-  ColorScheme,
-} from '@mantine/core'
-import { Notifications } from '@mantine/notifications'
-import { useHotkeys, useLocalStorage } from '@mantine/hooks'
-
-import myTheme from '../theme'
 import Hero from './Hero'
 import Projects from './Projects'
 import About from './About'
 import Contact from './Contact'
 import Header from './Header'
+import { useState } from 'react'
+import styled from '@emotion/styled'
+import LoadingOverlay from './LoadingOverlay'
+
+function useFontsLoading() {
+  const [loading, setLoaded] = useState(true)
+  document.fonts.ready
+    .then(() => {
+      setTimeout(() => {
+        setLoaded(false)
+      }, 1000)
+    })
+    .catch(console.error)
+  return loading
+}
+
+interface AppWrapperProps {
+  isLoading: boolean
+}
+const AppWrapper = styled.div<AppWrapperProps>`
+  visibility: ${({ isLoading }) => (isLoading ? 'hidden' : 'visible')};
+`
 
 function App() {
-  const [colorScheme, setColorScheme] = useLocalStorage<ColorScheme>({
-    key: 'mantine-color-scheme',
-    defaultValue: 'light',
-    getInitialValueInEffect: true,
-  })
-
-  const toggleColorScheme = (value?: ColorScheme) =>
-    setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'))
-
-  useHotkeys([['mod+J', () => toggleColorScheme()]])
-
+  const loading = useFontsLoading()
   return (
     <>
-      <ColorSchemeProvider
-        colorScheme={colorScheme}
-        toggleColorScheme={toggleColorScheme}
-      >
-        <MantineProvider
-          theme={{ ...myTheme, colorScheme }}
-          withGlobalStyles
-          withNormalizeCSS
-        >
-          <Header />
-          <Notifications />
-          <Hero />
-          <About />
-          <Projects />
-          <Contact />
-        </MantineProvider>
-      </ColorSchemeProvider>
+      {loading && <LoadingOverlay />}
+      <AppWrapper isLoading={loading}>
+        <Header />
+        <Hero />
+        <About />
+        <Projects />
+        <Contact />
+      </AppWrapper>
     </>
   )
 }
