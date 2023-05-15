@@ -5,11 +5,11 @@ import BrainPicture from '../assets/brain.jpg'
 import BallerinaPicture from '../assets/ballerina.jpg'
 import ExternalLinkPicture from '../assets/external-link.png'
 import HideMobile from './HideMobile'
-import ProjectHeading from './ProjectHeading'
-
-const Container = styled.div`
-  padding: 0 10rem;
-`
+import ContentBoxHeading from './ContentBoxHeading'
+import AboveTitleText from './AboveTitleText'
+import BaseTitle from './BaseTitle'
+import BelowTitleText from './BelowTitleText'
+import { TechList, TechListItem, TechLists } from './TechList'
 
 const Title = styled.div`
   font-size: 8vw;
@@ -37,7 +37,7 @@ const Project = styled.div`
   flex-direction: column;
   gap: 2rem;
   justify-content: center;
-  padding-top: 5rem;
+  padding: 0 2rem;
 `
 
 const ProjectRow = styled.div`
@@ -46,6 +46,7 @@ const ProjectRow = styled.div`
   gap: 0.75rem;
   align-items: center;
   max-width: 30rem;
+  text-align: justify;
 `
 
 const Divider = styled.div`
@@ -58,13 +59,14 @@ const Divider = styled.div`
 const Image = styled.img`
   filter: invert(100%) contrast(1.5);
   object-fit: contain;
-  height: 100%;
-  display: inline-block;
-  width: 20rem;
+  max-width: 20rem;
+  width: 80vw;
+  @media (max-height: 400px) {
+  }
 `
 
 const ContentBox = styled(ContentBox_)`
-  gap: 4rem;
+  gap: 30vw;
 `
 
 const ProjectLinks = styled.div`
@@ -88,108 +90,108 @@ const ProjectLink = styled.a`
   }
 `
 
-const TechLists = styled.div`
-  display: flex;
-  flex-direction: row;
-  text-align: left;
-  align-items: start;
-`
-const TechList = styled.ul`
-  font-size: 0.75rem;
-  font-weight: 600;
-  padding-top: -0.1em;
-  width: 50%;
-`
-const TechListItem = styled.li`
-  font-size: 0.75rem;
-  font-weight: 600;
+const ComingSoon = styled.span`
+  color: inherit;
+  font-size: 1rem;
+  opacity: 0.5;
+  text-decoration: underline;
+  cursor: not-allowed;
 `
 
 export default function Projects() {
   return (
-    <Container>
-      <ContentBox variant={ContentBoxVariant.Dark} id="projects">
-        <ProjectHeading />
-        <Project>
-          <ProjectRow>
-            <Image src={BrainPicture} alt="two minds one" />
-          </ProjectRow>
-          <ProjectRow>
-            <SubtitleBold>SOLO PROJECT</SubtitleBold>
-            <Title>TWO MINDS ONE</Title>
-            <ProjectLinks>
-              <ProjectLink href="#">Visit</ProjectLink>
-              <ProjectLink href="https://github.com/ellaroosmarijn/two-minds-one">
-                Code
-              </ProjectLink>
-            </ProjectLinks>
-            <SubtitleLight>
-              TWO MINDS ONE IS A PLATFORM FOR RECONNECTING PEOPLE DIVIDED BY
-              POLITICS. IT PROVIDES A SAFE SPACE FOR INDIVIDUALS TO PRACTICE
-              UNDERSTANDING THE OPPOSITION, FOSTERING EMPATHY AND DEEPER
-              COMPREHENSION.
-              <p />
-              <HideMobile>
-                {' '}
-                BY BRIDGING THE GAP BETWEEN MINDS, TWO MINDS ONE SEEKS TO CREATE
-                AN ENVIRONMENT WHERE PEOPLE CAN ENGAGE IN MEANINGFUL DIALOGUE
-                AND FIND COMMON GROUND DESPITE THEIR POLITICAL DIFFERENCES.
-              </HideMobile>
-            </SubtitleLight>
-            <Divider />
-            <SubtitleBold>BUILT USING</SubtitleBold>
-            <TechLists>
-              <TechList>
-                <TechListItem>TYPESCRIPT</TechListItem>
-                <TechListItem>REACT</TechListItem>
-                <TechListItem>REDUX</TechListItem>
-                <TechListItem>THUNKS</TechListItem>
-              </TechList>
-              <TechList>
-                <TechListItem>CHATGPT API</TechListItem>
-                <TechListItem>EXPRESS-SESSIONS</TechListItem>
-                <TechListItem>MANTINE COMPONENT LIBRARY</TechListItem>
-              </TechList>
-            </TechLists>
-          </ProjectRow>
-        </Project>
-        <Project>
-          <ProjectRow>
-            <Image src={BallerinaPicture} alt="gallerina" />
-          </ProjectRow>
-
-          <ProjectRow>
-            <SubtitleBold>GROUP PROJECT</SubtitleBold>
-            <Title>GALLERINA</Title>
-            <ProjectLinks>
-              <ProjectLink href="#">Visit</ProjectLink>
-              <ProjectLink href="https://github.com/tohora-2023/Gallerina">
-                Code
-              </ProjectLink>
-            </ProjectLinks>
-            <SubtitleLight>
-              GALLERINA IS AN ART CURATION WEBSITE, SIMILAR TO PINTEREST, WHERE
-              USERS CAN EXPLORE AND SAVE ARTWORK TO THEIR COLLECTIONS. LOGGED-IN
-              USERS CAN EASILY ADD AND MANAGE THEIR COLLECTED PAINTINGS.
-            </SubtitleLight>
-            <Divider />
-            <SubtitleBold>BUILT USING</SubtitleBold>
-            <TechLists>
-              <TechList>
-                <TechListItem>TYPESCRIPT</TechListItem>
-                <TechListItem>REACT</TechListItem>
-                <TechListItem>REDUX</TechListItem>
-                <TechListItem>THUNKS</TechListItem>
-              </TechList>
-              <TechList>
-                <TechListItem>SQLITE 3</TechListItem>
-                <TechListItem>RESTFULAPI</TechListItem>
-                <TechListItem>TAILWIND CSS</TechListItem>
-              </TechList>
-            </TechLists>
-          </ProjectRow>
-        </Project>
-      </ContentBox>
-    </Container>
+    <ContentBox variant={ContentBoxVariant.Dark} id="projects">
+      <ContentBoxHeading>
+        <AboveTitleText>RECENT</AboveTitleText>
+        <BaseTitle vwPercent={20}>PROJECTS</BaseTitle>
+        <BelowTitleText>
+          I began the following projects during my time at Dev Academy Aotearoa.
+          One is a personal project using ChatGPT, and the other is a group
+          project with an emphasis on peer programming and agile ceremonies.
+        </BelowTitleText>
+      </ContentBoxHeading>{' '}
+      <Project>
+        <ProjectRow>
+          <Image src={BrainPicture} alt="two minds one" />
+        </ProjectRow>
+        <ProjectRow>
+          <SubtitleBold>SOLO PROJECT</SubtitleBold>
+          <Title>TWO MINDS ONE</Title>
+          <ProjectLinks>
+            <ComingSoon>Coming soon</ComingSoon>
+            <ProjectLink href="https://github.com/ellaroosmarijn/two-minds-one">
+              Code
+            </ProjectLink>
+          </ProjectLinks>
+          <SubtitleLight>
+            TWO MINDS ONE IS A PLATFORM FOR RECONNECTING PEOPLE DIVIDED BY
+            POLITICS. IT PROVIDES A SAFE SPACE FOR INDIVIDUALS TO PRACTICE
+            UNDERSTANDING THE OPPOSITION, FOSTERING EMPATHY AND DEEPER
+            COMPREHENSION.
+            <p />
+            <HideMobile>
+              {' '}
+              BY BRIDGING THE GAP BETWEEN MINDS, TWO MINDS ONE SEEKS TO CREATE
+              AN ENVIRONMENT WHERE PEOPLE CAN ENGAGE IN MEANINGFUL DIALOGUE AND
+              FIND COMMON GROUND DESPITE THEIR POLITICAL DIFFERENCES.
+            </HideMobile>
+          </SubtitleLight>
+          <Divider />
+          <SubtitleBold>BUILT USING</SubtitleBold>
+          <TechLists>
+            <TechList align={'right'}>
+              <TechListItem>TYPESCRIPT</TechListItem>
+              <TechListItem>MANTINE</TechListItem>
+              <TechListItem>THUNKS</TechListItem>
+              <TechListItem>REACT</TechListItem>
+            </TechList>
+            <TechList align={'left'}>
+              <TechListItem>INSOMNIA</TechListItem>
+              <TechListItem>EXPRESS</TechListItem>
+              <TechListItem>CHATGPT</TechListItem>
+              <TechListItem>REDUX</TechListItem>
+            </TechList>
+          </TechLists>
+        </ProjectRow>
+      </Project>
+      <Project>
+        <ProjectRow>
+          <Image src={BallerinaPicture} alt="gallerina" />
+        </ProjectRow>
+        <ProjectRow>
+          <SubtitleBold>GROUP PROJECT</SubtitleBold>
+          <Title>GALLERINA</Title>
+          <ProjectLinks>
+            <ComingSoon>Coming Soon</ComingSoon>
+            <ProjectLink href="https://github.com/tohora-2023/Gallerina">
+              Code
+            </ProjectLink>
+          </ProjectLinks>
+          <SubtitleLight>
+            GALLERINA IS AN ART CURATION WEBSITE, SIMILAR TO PINTEREST, WHERE
+            USERS CAN EXPLORE AND SAVE ARTWORK TO THEIR COLLECTIONS. LOGGED-IN
+            USERS CAN EASILY ADD AND MANAGE THEIR COLLECTED PAINTINGS.
+          </SubtitleLight>
+          <Divider />
+          <SubtitleBold>BUILT USING</SubtitleBold>
+          <TechLists>
+            <TechList align={'right'}>
+              <TechListItem>TAILWIND CSS</TechListItem>
+              <TechListItem>RESTFULAPI</TechListItem>
+              <TechListItem>INSOMNIA</TechListItem>
+              <TechListItem>EXPRESS</TechListItem>
+              <TechListItem>REDUX</TechListItem>
+            </TechList>
+            <TechList align={'left'}>
+              <TechListItem>DBDIAGRAM.IO</TechListItem>
+              <TechListItem>TYPESCRIPT</TechListItem>
+              <TechListItem>SQLITE 3</TechListItem>
+              <TechListItem>THUNKS</TechListItem>
+              <TechListItem>REACT</TechListItem>
+            </TechList>
+          </TechLists>
+        </ProjectRow>
+      </Project>
+    </ContentBox>
   )
 }

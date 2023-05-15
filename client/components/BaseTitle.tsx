@@ -1,14 +1,25 @@
 import styled from '@emotion/styled'
+import { BREAKPOINTS } from '../../shared/constants'
 
-const BaseTitle = styled.div`
-  font-size: 15vw;
+interface BaseTitleProps {
+  vwPercent?: number
+  mobileSizeMultiplier?: number
+}
 
-  white-space: nowrap;
-  font-family: 'Vina Sans';
-  margin-top: -0.1em;
-  padding-bottom: 0.1em;
+const BaseTitle = styled.div<BaseTitleProps>`
+  height: 0.73em;
+  line-height: 0.55;
+  margin-bottom: 0.3rem;
+  overflow: hidden;
+  font-size: ${({ vwPercent }) => `${vwPercent || 15}vw`};
+  font-family: Vina Sans, sans-serif;
   font-weight: 500;
-  line-height: 0.75;
+  white-space: nowrap;
+
+  @media (max-width: ${BREAKPOINTS.sm}) {
+    font-size: ${({ vwPercent, mobileSizeMultiplier }) =>
+      `${(vwPercent || 15) * (mobileSizeMultiplier || 1.5)}vw`};
+  }
 `
 
 export default BaseTitle

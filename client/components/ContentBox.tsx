@@ -12,12 +12,13 @@ interface ContentBoxProps extends ChildrenProps {
 const ContentBox = styled.div<ContentBoxProps>`
   text-align: center;
   min-height: 100vh;
-  padding: 15rem 0;
+  padding: 30vw 0;
 
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  box-sizing: border-box;
 
   background: ${({ variant }) =>
     variant === ContentBoxVariant.Dark ? '#000000' : '#ffffff'};
