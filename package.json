@@ -98,7 +98,7 @@
     "react-textarea-autosize": "^8.4.1",
     "ts-node": "^10.9.1",
     "use-font-face-observer": "^1.2.1",
-    "vercel": "^29.2.1"
+    "vercel": "^29.3.0"
   },
   "prettier": {
     "semi": false,
