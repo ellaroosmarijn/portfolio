@@ -15,16 +15,15 @@ const hoverFadeStyle = `
 `
 
 export const Header = styled.div<NavOpenProps>`
+  font-size: 1.25rem;
   margin-top: 1rem;
   position: fixed;
   width: 100%;
   mix-blend-mode: difference;
   z-index: 1;
   @media (max-width: ${BREAKPOINTS.md}) {
+    box-sizing: border-box;
     margin-top: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
     padding: 1rem 1rem;
     ${({ open }) => (open ? 'mix-blend-mode: normal' : '')};
   }
@@ -64,10 +63,10 @@ export const GroupLinks = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    transition: color 0.3s;
     transform: rotateX(-90deg);
     transform-origin: 50% 0;
     text-align: center;
+    display: block;
   }
 
   & a {
@@ -85,7 +84,7 @@ export const GroupLinks = styled.div`
   }
 
   @media (max-width: ${BREAKPOINTS.md}) {
-    gap: 30px;
+    gap: 0.25rem;
     flex-direction: column;
     align-items: center;
 
@@ -112,12 +111,12 @@ export const GroupIcons = styled.div`
   align-items: center;
   gap: 1rem;
   right: 1.5rem;
-  height: 1.5em;
+  height: 1.5rem;
 
+  // fix ios auto sizing bug
   & a {
-    display: block;
-    height: 40%;
-    aspect-ratio: 1 / 1;
+    width: 20px !important;
+    height: 20px !important;
   }
 
   ${hoverFadeStyle}
@@ -125,13 +124,11 @@ export const GroupIcons = styled.div`
   @media (max-width: ${BREAKPOINTS.md}) {
     position: relative;
     right: 0;
-    gap: 15rem;
-    margin: -1.25em;
+    gap: 10rem;
   }
 
   @media (max-width: ${BREAKPOINTS.sm}) {
     gap: 5rem;
-    margin: -0.4em;
   }
 `
 
@@ -139,17 +136,15 @@ export const StyledAnchorLink = styled(AnchorLink)`
   color: inherit;
   font-weight: 600;
   text-decoration: none;
-  font-size: 1.25rem;
 
   @media (max-width: ${BREAKPOINTS.md}) {
-    margin: -0.5em;
     font-weight: 700;
   }
 `
 
 export const HamburglerButtonWrapper = styled.div`
-  position: relative;
-  right: 0;
+  position: absolute;
+  right: 1.5rem;
   display: none;
   z-index: 1010;
   cursor: pointer;
@@ -164,7 +159,7 @@ const hamburglerBarStyle = `
   height: 5px;
   background-color: #ffffff;
   margin: 6px 0;
-  transition: 0.4s;
+  transition: 0.3s;
   mix-blend-mode: difference;
 `
 
@@ -246,7 +241,7 @@ export default function HeaderDiv(): JSX.Element {
           <a href="https://www.linkedin.com/in/ellarrobinson/">
             <Icon variant={IconVariant.LinkedIn} />
           </a>
-          <a href="EllaRobinson_CV.pdf">
+          <a href="/Ella_CV.pdf">
             <Icon variant={IconVariant.PDF} />
           </a>
         </GroupIcons>
