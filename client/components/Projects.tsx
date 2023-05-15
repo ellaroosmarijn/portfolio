@@ -178,9 +178,9 @@ export default function Projects() {
             <TechList align={'right'}>
               <TechListItem>TAILWIND CSS</TechListItem>
               <TechListItem>RESTFULAPI</TechListItem>
-              <TechListItem>INSOMNIA</TechListItem>
               <TechListItem>EXPRESS</TechListItem>
               <TechListItem>REDUX</TechListItem>
+              <TechListItem>KNEX</TechListItem>
             </TechList>
             <TechList align={'left'}>
               <TechListItem>DBDIAGRAM.IO</TechListItem>
