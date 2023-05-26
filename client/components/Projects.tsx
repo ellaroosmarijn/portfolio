@@ -209,18 +209,18 @@ export default function Projects() {
           </ProjectLinks>
           <SubtitleLight>
             Let Me In is a teacher-led group project developed during Dev
-            Academy Aotearoa&apos;s bootcamp. This interactive game seeks to
-            offer participants a meme, specifically designed to be shared with
-            one&apos;s teachers when they are late to a Zoom meeting.
+            Academy Aotearoa&apos;s bootcamp. This interactive game provides
+            participants with a random meme, specifically designed to be shared
+            with one&apos;s teachers when they are late to a Zoom meeting.
           </SubtitleLight>
           <Divider />
           <SubtitleBold>BUILT USING</SubtitleBold>
           <TechLists>
             <TechList align={'right'}>
               <TechListItem>EXPRESS</TechListItem>
+              <TechListItem>AUTH0</TechListItem>
               <TechListItem>REACT</TechListItem>
               <TechListItem>KNEX</TechListItem>
-              <TechListItem>SCSS</TechListItem>
             </TechList>
             <TechList align={'left'}>
               <TechListItem>TYPESCRIPT</TechListItem>
