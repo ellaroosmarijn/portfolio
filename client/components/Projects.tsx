@@ -212,6 +212,10 @@ export default function Projects() {
             Academy Aotearoa&apos;s bootcamp. This interactive game provides
             participants with a random meme, specifically designed to be shared
             with one&apos;s teachers when they are late to a Zoom meeting.
+            <HideMobile>
+              Once logged in users can add meme&apos;s and view the ones that
+              they&apos;ve won.
+            </HideMobile>
           </SubtitleLight>
           <Divider />
           <SubtitleBold>BUILT USING</SubtitleBold>
