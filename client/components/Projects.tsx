@@ -3,6 +3,7 @@ import styled from '@emotion/styled'
 import ContentBox_, { ContentBoxVariant } from './ContentBox'
 import BrainPicture from '../assets/brain.jpg'
 import BallerinaPicture from '../assets/ballerina.jpg'
+import LetMeInPicture from '../assets/LetMeIn.jpg'
 import ExternalLinkPicture from '../assets/external-link.png'
 import HideMobile from './HideMobile'
 import ContentBoxHeading from './ContentBoxHeading'
@@ -188,6 +189,43 @@ export default function Projects() {
               <TechListItem>SQLITE 3</TechListItem>
               <TechListItem>THUNKS</TechListItem>
               <TechListItem>REACT</TechListItem>
+            </TechList>
+          </TechLists>
+        </ProjectRow>
+      </Project>
+      <Project>
+        <ProjectRow>
+          <Image src={LetMeInPicture} alt="LetMeIn" />
+        </ProjectRow>
+        <ProjectRow>
+          <SubtitleBold>GROUP PROJECT</SubtitleBold>
+          <Title>LET ME IN</Title>
+          <ProjectLinks>
+            <ComingSoon>Coming Soon</ComingSoon>
+            <ProjectLink href="https://github.com/ellaroosmarijn/Let-Me-In">
+              Code
+            </ProjectLink>
+          </ProjectLinks>
+          <SubtitleLight>
+            Let Me In is a teacher-led group project developed during Dev
+            Academy Aotearoa&apos;s bootcamp. This interactive game seeks to
+            offer participants a meme, specifically designed to be shared with
+            one&apos;s teachers when they are late to a Zoom meeting.
+          </SubtitleLight>
+          <Divider />
+          <SubtitleBold>BUILT USING</SubtitleBold>
+          <TechLists>
+            <TechList align={'right'}>
+              <TechListItem>EXPRESS</TechListItem>
+              <TechListItem>THUNKS</TechListItem>
+              <TechListItem>REDUX</TechListItem>
+              <TechListItem>SCSS</TechListItem>
+            </TechList>
+            <TechList align={'left'}>
+              <TechListItem>TYPESCRIPT</TechListItem>
+              <TechListItem>REACT</TechListItem>
+              <TechListItem>KNEX</TechListItem>
+              <TechListItem>JEST</TechListItem>
             </TechList>
           </TechLists>
         </ProjectRow>
