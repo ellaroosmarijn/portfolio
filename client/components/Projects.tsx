@@ -218,14 +218,14 @@ export default function Projects() {
           <TechLists>
             <TechList align={'right'}>
               <TechListItem>EXPRESS</TechListItem>
-              <TechListItem>THUNKS</TechListItem>
-              <TechListItem>REDUX</TechListItem>
+              <TechListItem>REACT</TechListItem>
+              <TechListItem>KNEX</TechListItem>
               <TechListItem>SCSS</TechListItem>
             </TechList>
             <TechList align={'left'}>
               <TechListItem>TYPESCRIPT</TechListItem>
-              <TechListItem>REACT</TechListItem>
-              <TechListItem>KNEX</TechListItem>
+              <TechListItem>THUNKS</TechListItem>
+              <TechListItem>REDUX</TechListItem>
               <TechListItem>JEST</TechListItem>
             </TechList>
           </TechLists>
