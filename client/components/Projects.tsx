@@ -31,6 +31,7 @@ const SubtitleLight = styled.div`
   font-size: 0.75rem;
   font-weight: 600;
   paddig-top: -0.1em;
+  text-transform: uppercase;
 `
 
 const Project = styled.div`
