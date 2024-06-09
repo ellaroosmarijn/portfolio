@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
-import { GoFilePdf } from 'react-icons/go'
+import { FaFilePdf } from 'react-icons/fa'
 import { FaLinkedin } from 'react-icons/fa'
-import { GoMarkGithub } from 'react-icons/go'
+import { FaGithub } from 'react-icons/fa'
 
 export enum IconVariant {
   PDF,
@@ -37,10 +37,10 @@ export const LinkedInIcon = styled(FaLinkedin)`
   ${iconStyles}
 `
 
-export const PdfIcon = styled(GoFilePdf)`
+export const PdfIcon = styled(FaFilePdf)`
   ${iconStyles}
 `
 
-export const GitHubIcon = styled(GoMarkGithub)`
+export const GitHubIcon = styled(FaGithub)`
   ${iconStyles}
 `
