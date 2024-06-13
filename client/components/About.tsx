@@ -44,8 +44,8 @@ export default function About() {
           <ContentWrapper>
             <SubTitle>INTERESTED IN:</SubTitle>
             <BelowTitleText>
-              Interested in improving social systems, such as bridging the
-              political divide, through innovative UX and tech.
+              Interested in improving social systems through innovative UX and
+              tech.
             </BelowTitleText>
             <SubTitle>USING:</SubTitle>
             <TechLists>
