@@ -1,16 +1,18 @@
 import styled from '@emotion/styled'
 
-import ContentBox_, { ContentBoxVariant } from './ContentBox'
+import ContentBox_, { ContentBoxVariant } from '../components/ContentBox'
 import BrainPicture from '../assets/brain.jpg'
 import BallerinaPicture from '../assets/ballerina.jpg'
 import LetMeInPicture from '../assets/LetMeIn.jpg'
 import ExternalLinkPicture from '../assets/external-link.png'
-import HideMobile from './HideMobile'
-import ContentBoxHeading from './ContentBoxHeading'
-import AboveTitleText from './AboveTitleText'
-import BaseTitle from './BaseTitle'
-import BelowTitleText from './BelowTitleText'
-import { TechList, TechListItem, TechLists } from './TechList'
+import tracksuitLogo from '../assets/tracksuitLogo.png'
+import bookReviews from '../assets/bookReviews.png'
+import HideMobile from '../components/HideMobile'
+import ContentBoxHeading from '../components/ContentBoxHeading'
+import AboveTitleText from '../components/AboveTitleText'
+import BaseTitle from '../components/BaseTitle'
+import BelowTitleText from '../components/BelowTitleText'
+import { TechList, TechListItem, TechLists } from '../components/TechList'
 
 const Title = styled.div`
   font-size: 8vw;
@@ -20,9 +22,11 @@ const Title = styled.div`
   padding-bottom: 0.1em;
   font-weight: 500;
   line-height: 0.75;
+  text-transform: uppercase;
 `
 
 const SubtitleBold = styled.div`
+  text-transform: uppercase;
   font-size: 0.75rem;
   font-weight: 800;
 `
@@ -43,6 +47,7 @@ const Project = styled.div`
 `
 
 const ProjectRow = styled.div`
+  text-transform: uppercase;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
@@ -63,8 +68,6 @@ const Image = styled.img`
   object-fit: contain;
   max-width: 20rem;
   width: 80vw;
-  @media (max-height: 400px) {
-  }
 `
 
 const ContentBox = styled(ContentBox_)`
@@ -111,7 +114,87 @@ export default function Projects() {
           One is a personal project using ChatGPT, and the other is a group
           project with an emphasis on peer programming and agile ceremonies.
         </BelowTitleText>
-      </ContentBoxHeading>{' '}
+      </ContentBoxHeading>
+      <Project>
+        <ProjectRow>
+          <Image src={bookReviews} alt="online-library" />
+        </ProjectRow>
+        <ProjectRow>
+          <SubtitleBold>Solo project</SubtitleBold>
+          <Title>Ink & Pages</Title>
+          <ProjectLinks>
+            <ProjectLink href="">Visit</ProjectLink>
+            <ProjectLink href="">Code</ProjectLink>
+          </ProjectLinks>
+          <SubtitleLight>
+            Ink & Pages is a book review website that allows users to create,
+            read, update, and delete their reviews. As a project to strengthen
+            my fundamentals, I built this full-stack web application from
+            scratch using the basics.
+            <p />
+            <HideMobile>
+              This project reinforced my understanding of core web technologies
+              and helped me gain hands-on experience with server-side processing
+              and data storage.
+            </HideMobile>
+          </SubtitleLight>
+          <Divider />
+          <SubtitleBold>BUILT USING</SubtitleBold>
+          <TechLists>
+            <TechList align={'right'}>
+              <TechListItem>JavaScript</TechListItem>
+            </TechList>
+            <TechList align={'left'}>
+              <TechListItem>Postgresql</TechListItem>
+            </TechList>
+            <TechList align={'center'}>
+              <TechListItem>Node</TechListItem>
+            </TechList>
+          </TechLists>
+        </ProjectRow>
+      </Project>
+      {/*  */}
+      <Project>
+        <ProjectRow>
+          <Image src={bookReviews} alt="online-library" />
+        </ProjectRow>
+        <ProjectRow>
+          <SubtitleBold>TEAM PROJECT</SubtitleBold>
+          <Title>TRACKSUIT MARKETING WEBSITE</Title>
+          <div style={{ display: 'flex', justifyContent: 'center' }}>
+            <ProjectLink href="https://www.gotracksuit.com/us">
+              Visit
+            </ProjectLink>
+          </div>
+          <SubtitleLight>
+            Tracksuit's marketing website serves as a platform to showcase the
+            company's values, product, and share insightful blog posts about
+            branding and marketing.
+            <p />
+            <HideMobile>
+              As a key developer, I played a crucial role in creating the
+              website. I was responsible for building the About Page, Product
+              Page, Blog (including blog posts, articles, tools, and templates),
+              Header, Footer, and call-to-action elements. Additionally, I
+              contributed to the development of components for the Home and
+              Contact pages.
+            </HideMobile>
+          </SubtitleLight>
+          <Divider />
+          <SubtitleBold>BUILT USING</SubtitleBold>
+          <TechLists>
+            <TechList align={'right'}>
+              <TechListItem>TYPESCRIPT</TechListItem>
+              <TechListItem>HUBSPOT</TechListItem>
+              <TechListItem>CSS</TechListItem>
+            </TechList>
+            <TechList align={'left'}>
+              <TechListItem>SANITY CMS</TechListItem>
+              <TechListItem>REACT</TechListItem>
+            </TechList>
+          </TechLists>
+        </ProjectRow>
+      </Project>
       <Project>
         <ProjectRow>
           <Image src={BrainPicture} alt="two minds one" />

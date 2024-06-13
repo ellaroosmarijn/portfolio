@@ -1,11 +1,15 @@
-import ContentBox, { ContentBoxVariant } from './ContentBox'
-import BaseTitle from './BaseTitle'
-import AboveTitleText from './AboveTitleText'
-import BelowTitleText from './BelowTitleText'
-import ContentBoxHeading from './ContentBoxHeading'
+import ContentBox, { ContentBoxVariant } from '../components/ContentBox'
+import BaseTitle from '../components/BaseTitle'
+import AboveTitleText from '../components/AboveTitleText'
+import BelowTitleText from '../components/BelowTitleText'
+import ContentBoxHeading from '../components/ContentBoxHeading'
 import styled from '@emotion/styled'
 import { BREAKPOINTS } from '../../shared/constants'
-import { TechList as TechList_, TechListItem, TechLists } from './TechList'
+import {
+  TechList as TechList_,
+  TechListItem,
+  TechLists,
+} from '../components/TechList'
 
 const SubTitle = styled(AboveTitleText)`
   font-size: 1rem;

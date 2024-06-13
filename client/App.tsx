@@ -1,11 +1,11 @@
-import Hero from './Hero'
-import Projects from './Projects'
-import About from './About'
-import Contact from './Contact'
-import Header from './Header'
+import Hero from './components/Hero'
+import Projects from './pages/Projects'
+import About from './pages/About'
+import Contact from './pages/Contact'
+import Header from './components/Header'
 import { useState } from 'react'
 import styled from '@emotion/styled'
-import LoadingOverlay from './LoadingOverlay'
+import LoadingOverlay from './components/LoadingOverlay'
 
 function useFontsLoading() {
   const [loading, setLoaded] = useState(true)

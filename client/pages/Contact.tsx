@@ -1,12 +1,12 @@
 import { ValidationError, useForm } from '@formspree/react'
 import TextareaAutosize from 'react-textarea-autosize'
 
-import AboveTitleText from './AboveTitleText'
-import ContentBox, { ContentBoxVariant } from './ContentBox'
+import AboveTitleText from '../components/AboveTitleText'
+import ContentBox, { ContentBoxVariant } from '../components/ContentBox'
 import styled from '@emotion/styled'
-import BaseTitle from './BaseTitle'
+import BaseTitle from '../components/BaseTitle'
 import { BREAKPOINTS } from '../../shared/constants'
-import BelowTitleText from './BelowTitleText'
+import BelowTitleText from '../components/BelowTitleText'
 
 const Form = styled.form`
   margin-top: 4rem;
@@ -50,7 +50,9 @@ const Button = styled.button`
   display: flex;
   background-color: #000000;
   color: #ffffff;
-  font-family: Work sans, sans serif;
+  font-family:
+    Work sans,
+    sans serif;
   font-size: 1.25rem;
   font-weight: 600;
   cursor: pointer;

@@ -2,7 +2,7 @@ import { createRoot } from 'react-dom/client'
 import { Global, css } from '@emotion/react'
 import emotionNormalize from 'emotion-normalize'
 
-import App from './components/App'
+import App from './App'
 
 document.addEventListener('DOMContentLoaded', () => {
   createRoot(document.getElementById('app') as HTMLElement).render(
@@ -16,11 +16,13 @@ document.addEventListener('DOMContentLoaded', () => {
             overflow-x: hidden;
             background-color: #000000;
             color: #ffffff;
-            font-family: Work Sans, sans-serif;
+            font-family:
+              Work Sans,
+              sans-serif;
           }
         `}
       />
       <App />
-    </>
+    </>,
   )
 })
